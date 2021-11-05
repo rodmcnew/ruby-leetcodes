@@ -1,10 +1,6 @@
 # https://leetcode.com/problems/lru-cache/submissions/
 
 class Node
-
-=begin
-    :type capacity: Integer
-=end
     attr_accessor :key, :value, :next, :prev
     def initialize(key = nil, value = nil)
         @key = key
