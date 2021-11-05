@@ -4,7 +4,6 @@
 # @param {Integer} target
 # @return {Integer[]}
 def two_sum(nums, target)
-    p nums.class
     nums = nums.map.with_index {|num,i| [i, num]}
     nums = nums.sort_by { |item| item[1] }
     left = 0
