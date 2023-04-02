@@ -22,7 +22,7 @@ def length_of_longest_substring(s)
             j += 1
         end
     end
-    return max_length
+    max_length
 end
 
 # Older 2021-11-04 O(n^2) solution that shouldn't have been accepted:
