@@ -10,8 +10,7 @@ def length_of_longest_substring(s)
     while i < s.length
         if seen.include?(s[j]) || j == s.length
             max_length = [max_length, j - i].max
-            duplicate_char = s[j]
-            while s[i] != duplicate_char
+            while s[i] != s[j]
                 seen.delete(s[i])
                 i += 1
             end
