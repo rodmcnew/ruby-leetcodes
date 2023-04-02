@@ -1,16 +1,15 @@
 # https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
-
 # @param {String} s
 # @return {Integer}
 def length_of_longest_substring(s)
-    longest_length = 0
+    max_length = 0
     i = 0
     j = 1
     seen = Set.new([s[i]])
     while i < s.length
         if seen.include?(s[j]) || j == s.length
-            longest_length = [longest_length, j - i].max
+            max_length = [max_length, j - i].max
             duplicate_char = s[j]
             while s[i] != duplicate_char
                 seen.delete(s[i])
@@ -23,7 +22,7 @@ def length_of_longest_substring(s)
             j += 1
         end
     end
-    return longest_length
+    return max_length
 end
 
 # Older 2021-11-04 O(n^2) solution that shouldn't have been accepted:
